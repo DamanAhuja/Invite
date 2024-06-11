@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>25th Anniversary Invitation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>Celebrate Our 25th Wedding Anniversary!</h1>
+      <p>You are cordially invited to join us in celebrating our 25 years of love, laughter, and togetherness.</p>
+      <p>Date: [Date]</p>
+      <p>Time: [Time]</p>
+      <p>Location: [Location]</p>
+      <button onclick="showRSVPForm()">RSVP</button>
+    </div>
+    <div class="rsvp-form" id="rsvpForm">
+      <h2>RSVP</h2>
+      <form>
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
