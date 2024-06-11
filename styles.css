@@ -18,10 +18,9 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('https://github.com/DamanAhuja/Invite/assets/142963733/a01543d4-c770-4774-9fb1-bd5b52f20264'); 
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat; 
+  background-image: url('https://github.com/DamanAhuja/Invite/assets/142963733/a01543d4-c770-4774-9fb1-bd5b52f20264'); /* Replace 'background.jpg' with your parents' photo */
+  background-size: cover;
+  filter: blur(10px);
   z-index: -1;
 }
 
