@@ -1,100 +1,42 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #222;
-  color: #fff;
-  overflow: hidden;
-}
+// Parallax scrolling effect
+window.addEventListener('scroll', function() {
+  const parallax = document.querySelector('.background');
+  let scrollPosition = window.pageYOffset;
 
-.container {
-  position: relative;
-  height: 100vh;
-}
+  parallax.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
+});
 
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('https://github.com/DamanAhuja/Invite/assets/142963733/a01543d4-c770-4774-9fb1-bd5b52f20264');
-  background-size: cover;
-  filter: blur(5px);
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
+// Automatically play background music
+document.addEventListener('DOMContentLoaded', function() {
+  const backgroundMusic = document.getElementById('backgroundMusic');
+  backgroundMusic.play().catch((error) => {
+    console.error('Music autoplay was prevented:', error);
+  });
 
-.background.loaded {
-  opacity: 1;
-}
+  const backgroundImage = new Image();
+  backgroundImage.src = 'https://github.com/DamanAhuja/Invite/assets/142963733/a01543d4-c770-4774-9fb1-bd5b52f20264';
+  backgroundImage.onload = function() {
+    document.querySelector('.background').classList.add('loaded');
+  };
 
-.content {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  text-align: center;
-}
+  // Heartfelt notes for the timeline
+  const notes = [
+    "Congratulations on your 25th wedding anniversary!",
+    "Wishing you both a lifetime of happiness and love.",
+    "Your journey together is truly inspirational.",
+    "May your love continue to grow stronger every day.",
+    "Cheers to 25 years of togetherness and many more to come!",
+    "Your love story is a testament to true love and commitment.",
+    "Here's to many more beautiful years together."
+  ];
 
-h1 {
-  font-size: 3em;
-  margin-bottom: 20px;
-}
+  const timeline = document.getElementById('timeline');
 
-p {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 1em;
-  background-color: #FFD700;
-  color: #222;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #FFA500;
-}
-
-.timeline-container {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  overflow: hidden;
-  height: 200px;
-  background-color: rgba(0, 0, 0, 0.5);
-  margin-top: 20px;
-}
-
-.timeline {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  animation: scroll 20s linear infinite;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-.timeline-item {
-  font-size: 1.2em;
-  padding: 10px;
-  border-bottom: 1px solid #fff;
-  width: 80%;
-  text-align: center;
-}
+  // Add notes to the timeline
+  notes.forEach(note => {
+    const noteElement = document.createElement('div');
+    noteElement.classList.add('timeline-item');
+    noteElement.textContent = note;
+    timeline.appendChild(noteElement);
+  });
+});
