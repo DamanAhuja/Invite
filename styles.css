@@ -20,7 +20,7 @@ body {
   height: 100%;
   background-image: url('https://github.com/DamanAhuja/Invite/assets/142963733/a01543d4-c770-4774-9fb1-bd5b52f20264'); /* Replace 'background.jpg' with your parents' photo */
   background-size: cover;
-  filter: blur(10px);
+  filter: blur(5px);
   z-index: -1;
 }
 
