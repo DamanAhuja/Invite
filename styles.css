@@ -4,16 +4,34 @@ body {
   font-family: Arial, sans-serif;
   background-color: #222;
   color: #fff;
+  overflow: hidden;
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   height: 100vh;
 }
 
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('background.jpg'); /* Replace 'background.jpg' with your parents' photo */
+  background-size: cover;
+  filter: blur(10px);
+  z-index: -1;
+}
+
 .content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   text-align: center;
 }
 
@@ -42,7 +60,16 @@ button:hover {
 }
 
 .rsvp-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: none;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 .rsvp-form h2 {
