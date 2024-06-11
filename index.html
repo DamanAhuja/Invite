@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>25th Anniversary Invitation</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preload" href="https://github.com/DamanAhuja/Invite/assets/142963733/a01543d4-c770-4774-9fb1-bd5b52f20264" as="image">
 </head>
 <body>
   <div class="container">
@@ -14,12 +15,15 @@
       <p>You are cordially invited to join us in celebrating our 25 years of love, laughter, and togetherness.</p>
       <p>Date: 20th June, 2024</p>
       <p>Time: 7pm onwards</p>
-      <p>Location: <a href="https://maps.app.goo.gl/ZuiRBb9C9DThjsxS7" target="_blank">[Precious Forever Banquets]</a></p>
-      <button onclick="toggleMusic()">Play Music</button>
+      <p>Location: <a href="https://maps.app.goo.gl/ZuiRBb9C9DThjsxS7" target="_blank">Precious Forever Banquets</a></p>
+    </div>
+    <div class="timeline-container">
+      <div class="timeline" id="timeline">
+        <!-- Heartfelt notes will be dynamically added here -->
+      </div>
     </div>
   </div>
-  <audio id="backgroundMusic" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" loop></audio>
-  
+  <audio id="backgroundMusic" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" loop autoplay></audio>
   <script src="script.js"></script>
 </body>
 </html>
